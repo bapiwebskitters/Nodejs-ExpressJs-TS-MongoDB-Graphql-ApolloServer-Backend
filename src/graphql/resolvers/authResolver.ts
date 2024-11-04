@@ -1,4 +1,5 @@
 // src/graphql/resolvers/authResolver.ts
+
 import AuthController from "../../controllers/AuthController";
 
 export const authResolver = {
@@ -18,12 +19,11 @@ export const authResolver = {
       }
     ) => {
       console.log("register", args);
-      
+
       const resp = await AuthController.register(args);
-      
+
       console.log("User registration resp", resp);
       return resp;
-
     },
     forgotPassword: async (_: any, args: { email: string }) => {
       return await AuthController.forgotPassword(args);

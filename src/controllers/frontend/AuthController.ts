@@ -1,7 +1,7 @@
 // src/controllers/AuthController.ts
-import { AuthRepository } from "../repository/AuthRepository";
-import { UserRepository } from "../repository/UserRepository";
-import { IUser } from "../interfaces/UserInterface";
+import { AuthRepository } from "../../repository/AuthRepository";
+import { UserRepository } from "../../repository/UserRepository";
+import { IUser } from "../../interfaces/UserInterface";
 
 class AuthController {
   private authRepository: AuthRepository;

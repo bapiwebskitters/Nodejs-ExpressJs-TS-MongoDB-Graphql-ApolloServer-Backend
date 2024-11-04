@@ -1,6 +1,6 @@
 // src/routes/web/auth.ts
 import express from "express";
-import AuthController from "../../../controllers/admin/AuthController";
+import AuthController from "../../../controllers/frontend/AuthController";
 const routeLabel = require("route-label");
 const router = express.Router();
 const namedRouter = routeLabel(router);
