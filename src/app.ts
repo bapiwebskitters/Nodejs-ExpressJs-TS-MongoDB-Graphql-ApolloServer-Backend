@@ -15,7 +15,9 @@ const StartServer = async () => {
     await dbConnection();
 
     // Setup Apollo Server
-    const apolloMiddleware = await createApolloServer();
+    const { middleware: apolloMiddleware } = await createApolloServer();
+
+    // Apply Apollo middleware at the /graphql endpoint
     app.use("/graphql", apolloMiddleware);
 
     // Setup Express app configurations
