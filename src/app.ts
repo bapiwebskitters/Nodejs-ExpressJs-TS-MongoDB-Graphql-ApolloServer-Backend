@@ -3,6 +3,7 @@ import express from "express";
 import App from "./services/ExpressApp";
 import dbConnection from "./services/Database";
 import { APP_NAME, BASE_URL, PORT } from "./config";
+import { setupSwagger } from "./config/swagger";
 import "colors";
 import { createApolloServer } from "./services/ApolloServer";
 
@@ -19,6 +20,9 @@ const StartServer = async () => {
 
     // Setup Express app configurations
     await App(app);
+
+    // Setup Swagger for API documentation
+    setupSwagger(app);
 
     // Start the server
     app.listen(PORT, () => {

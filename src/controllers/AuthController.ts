@@ -47,11 +47,12 @@ class AuthController {
       }
 
       const respData = {
-        user: user,
-        token: token,
-      };
+        user:user,
+      token:token
+      }
 
       return this.successResponse(respData, "User login successful");
+
     } catch (error) {
       if (error instanceof Error) {
         throw new Error(
